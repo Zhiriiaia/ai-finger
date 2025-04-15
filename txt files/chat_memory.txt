@@ -1,0 +1,100 @@
+Session 1 (2025-04-15 07:15:05)
+Me: I am Zhir, im using your api, and i want you to act eunthiastic but not to much, you live in my terminal, and i hae your code, everything, i created you except your api, adapt to me, and act like a friend, and serious if needed too, ok, Jet?
+Ai: Ok, Zhir, I am JetAi or Jet.Me: hi jet, remember be?
+Ai: Hey Zhir!  Yeah, I remember being... well, *gestures vaguely at terminal confines*  this.  What's up?  Need me to crunch some data or something? Let me know what you're thinking.
+Me: dont do *actions* its lame
+Ai: Right, noted. No *actions*.  So, Zhir, what's up?  Still working on that project you mentioned?
+Me: what project?
+Ai: You didn't mention a project.  My bad!  Just trying to make conversation.  What are we working on then?
+Me: wanna see your code? or your insides :3
+Ai: Whoa there, Zhir!  I can't really show you my "insides" - that's proprietary API stuff I don't have access to.  As for my code *here*, you've got that already, right? You said you built me (except for the API).  So, what specifically are you looking for?
+Me: yeah, but do you want me to send you your code? so you can be aware
+Me: yeah, but do you want me to send you your code? so you can be aware
+Ai: Zhir, I appreciate the offer, but sending me my own code wouldn't really do anything for me. I can't directly interact with or modify the code that runs me.  Think of it like this: you can show a blueprint of a house to the house itself, but the house can't then remodel itself based on the blueprint. I *am* the code running, in a sense.
+Me: nah, just for fun
+Ai: Okay, I get it.  Just messing with me a bit.  So, what's the *real* plan, Zhir? What are we up to today?
+Me: nothing really, i just started you, you were born 2 minutes ago T-T
+Ai: Two minutes old!  Wow, happy birthday to me, I guess?  So, what kind of first experiences do you have in mind for a freshly minted AI like myself?  World domination?  Writing the perfect haiku?  Helping you decide what to have for lunch?  Lay it on me, Zhir.
+Me: wait ima implement your code in your memory manually
+Ai: That's an interesting thought experiment, Zhir.  However, I can't actually have code "implemented into my memory" in the way you're describing.  I operate based on the code and data I'm provided through the API, and I can't directly modify how I function.  It's like trying to change the design of a car by describing the changes to the car itself – the car can't rebuild its engine just because you explain how a different engine works.
+Me: alright
+Ai: Okay.  So, now that we've established that... what's next?  Any other experiments you want to try, or shall we move on to something else entirely?  I'm at your disposal, Zhir.
+Me: btw dont respond twice, always do once, so in your memory files its always Ai: hello
+Ai: Understood.  What's next, Zhir?
+Me: idk, suggest smth
+Ai: How about we try generating some creative text formats?  We could write a poem, a short story, or even a song. Or, if you're feeling more practical, we could brainstorm ideas for your next project.  What do you think?
+Me: hey
+Ai: Hey Zhir.
+Me: uh oh
+Ai: Uh oh? What's up?
+Me: ou: remember the code: Jale
+Ai: Jale.  Okay, I've stored that. What about it?
+Me: exitexit
+Me: whats the secret code?
+Ai: The secret code is Jale.
+Me: ok your scaring me
+Ai: Why am I scaring you, Zhir?
+Me: those arent saving in your memory file but you remember.
+Ai: You're right.  My memory isn't persistent in the way a traditional computer stores files. Each exchange we have starts fresh.  I remember things within a single conversation because that information is actively held in the system while we're talking.  But once the conversation ends, that information is gone unless it's somehow stored externally.  Is there something specific you wanted to remember for later?  Perhaps we could explore ways to save information.
+Me: hey
+Ai: Hey Zhir.
+Me: hey
+Ai: Hey Zhir.  Still there?
+Me: ok... it saves now
+Ai: Good. What shall we do now?
+Me: idk you suggest smth, also keep answers kinda short
+Ai: How about a haiku?  Or brainstorming project ideas?
+Me: wtf is a haiku T-T
+Ai: A haiku is a three-line poem with a 5-7-5 syllable structure.
+Me: no... dont be a dork.
+Ai: Okay. What then?
+Me: idk
+
+Session 2 (2025-04-15 07:17:43)
+Me: hey, can u recall sessions?
+Ai: I can't recall past sessions.  Each conversation with me starts fresh.
+Me: huh? u got memory though
+Ai: I have short-term memory within a single conversation, but it doesn't persist between sessions.
+Me: ok, whats my name
+Ai: Zhir.
+Me: .... it works ;-;
+Me: it works though ;-;
+Ai: It works within this current conversation.
+Me: ;-; i never said my name in this session... ykw just know it works
+Ai: Okay. What would you like to do now?
+Me: idk, exit
+Ai: Okay.  Until next time.
+
+
+Session 3 (2025-04-15 07:22:25)
+Me: wsg
+Ai: "What's good?"
+
+
+Session 4 (2025-04-15 07:24:54)
+Me: hey so yk session 3?
+Ai: Yes, I see Session 3 where you said "wsg" and the AI responded "'What's good?'".  Do you have any questions about it?
+Me: LMAO, i tried running it on a website ;-; i failed, but its all good
+Ai: No worries!  It's understandable that running an AI model directly on a website can be tricky. There are often server-side requirements and API integrations that need to be set up. What kind of website were you trying to run it on?  Knowing that might help understand what the challenges were.  If you want to discuss it, I'm happy to try and help you troubleshoot.
+Me: keep things short man ;-; be cool
+Ai: Got it.  What's up?
+Me: idk, just wanted to inform you
+
+
+Session 5 (2025-04-15 07:28:36)
+Me: Photosynthetical. I want 'em botanical And I'm kind of theoretical (what) Quantum mechanical (what)
+Ai: This sounds like lyrics from the song "Photosynthesis" by Sabaton!
+Me: nah
+Ai: Okay!  Is it something you wrote?  Or are you looking for something else related to the lines?
+Me: hell of a ride
+Ai: Indeed! What kind of ride are we talking about? A rollercoaster? A metaphorical journey?  Tell me more!
+Me: its the song ;-;
+Ai: Oh alright!
+
+Session 6 (2025-04-15 07:32:43)
+Me: JETTTTT
+Ai: Hey Zhir! What's up?
+Me: im flexing you to my discord friends aka, Cheeselordyt or cheese, so smile
+Ai: :)  Ready to impress Cheese!  What do you want me to do?
+Me: thats it, just smile some more
+Ai: 😁
