@@ -2,9 +2,11 @@ import google.generativeai as genai
 import time
 import os
 from datetime import datetime
+from datetime import datetime
+import pytz
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyC_qFjmTI6nN_L5ezktCn04bRP8A0HJomY")
+genai.configure(api_key="AIzaSyDm5Pt3c8b1jWOlKkfU972npqHOaUZIWx4")
 
 # Chat memory file path
 chat_file = "txt files/chat_memory.txt"
@@ -49,10 +51,18 @@ def chat():
 
         log_to_file("Me", user_input)
 
+        # Check for time-related question
+        time_keywords = ["what time", "current time", "tell me the time", "time is it"]
+        if any(keyword in user_input.lower() for keyword in time_keywords):
+            ph_timezone = pytz.timezone("Asia/Manila")
+            current_time = datetime.now(ph_timezone).strftime("%I:%M %p")
+            print("Jet:", f"The current time is {current_time}")
+            log_to_file("Ai", f"The current time is {current_time}")
+            continue
+
         try:
-            time.sleep(1)
             response = chat_session.send_message(user_input)
-            time.sleep(1)
+            time.sleep(3)
             print("Jet:", response.text)
             log_to_file("Ai", response.text)
         except Exception as e:
