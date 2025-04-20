@@ -14,7 +14,7 @@ os.makedirs("txt files", exist_ok=True)
 os.makedirs("images", exist_ok=True)
 
 # Count sessions
-session_number = 1
+session_number = 1 
 if os.path.exists(chat_file):
     with open(chat_file, "r") as f:
         session_number += sum(1 for line in f if line.lower().startswith("session"))
@@ -77,6 +77,12 @@ def chat():
             print("Jet:", result)
             log_to_file("Ai", result)
             continue
+
+        exit_keywords = ["bye", "see you", "shutdown"]
+        response = chat_session.send_message(user_input)
+        if any(keyword in user_input.lower() for keyword in exit_keywords):
+            print("Jet:", response.text)
+            break
 
         try:
             response = chat_session.send_message(user_input)
