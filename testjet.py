@@ -4,6 +4,7 @@ from datetime import datetime
 import pytz
 from PIL import Image
 from io import BytesIO
+from bs4 import BeautifulSoup
 
 # Configure Gemini API
 genai.configure(api_key="AIzaSyDm5Pt3c8b1jWOlKkfU972npqHOaUZIWx4")
@@ -50,6 +51,27 @@ def generate_image(prompt):
     except Exception as e:
         return f"Image generation failed: {e}"
 
+def fetch_url_content(url):
+    try:
+        response = requests.get(url, timeout=5)
+        soup = BeautifulSoup(response.text, "html.parser")
+        text = soup.get_text()
+        cleaned = ' '.join(text.replace('\n', ' ').split())[:2000]
+        return cleaned
+    except Exception as e:
+        return f"Failed to fetch URL: {e}"
+
+def analyze_image(image_path):
+    try:
+        with Image.open(image_path) as img:
+            img_bytes = BytesIO()
+            img.save(img_bytes, format="PNG")
+            img_bytes.seek(0)
+            response = model.generate_content(["Analyze this image:", img_bytes.read()])
+            return response.text
+    except Exception as e:
+        return f"Failed to analyze image: {e}"
+
 def chat():
     print(f"Jet: Hey! This is Session {session_number}. Type 'exit' to quit.")
     while True:
@@ -78,16 +100,28 @@ def chat():
             log_to_file("Ai", result)
             continue
 
-        exit_keywords = ["bye", "see you", "shutdown"]
-        response = chat_session.send_message(user_input)
-        if any(keyword in user_input.lower() for keyword in exit_keywords):
-            print("Jet:", response.text)
-            log_to_file("Ai", response.text)
-            break
+        # Image analysis check
+        if user_input.lower().startswith("check image"):
+            image_name = user_input[len("check image"):].strip()
+            image_path = os.path.join("images", image_name)
+            result = analyze_image(image_path)
+            print("Jet:", result)
+            log_to_file("Ai", result)
+            continue
 
+        # URL analysis check
+        if user_input.lower().startswith("http://") or user_input.lower().startswith("https://"):
+            url_content = fetch_url_content(user_input)
+            user_input = f"Here's a link: {user_input}\nContent preview: {url_content}\nNow, what can you tell me about this?"
+
+        exit_keywords = ["bye", "see you", "shutdown"]
         try:
             response = chat_session.send_message(user_input)
-            with open(chat_file, "r") as f: #possibly not working, this is so it checks the memory live while chatting
+            if any(keyword in user_input.lower() for keyword in exit_keywords):
+                print("Jet:", response.text)
+                log_to_file("Ai", response.text)
+                break
+            with open(chat_file, "r") as f:
                 past_convo = f.read()
             time.sleep(2)
             print("Jet:", response.text)

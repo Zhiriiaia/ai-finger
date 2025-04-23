@@ -1,50 +1,43 @@
-import wikipediaapi
-import requests
-from PIL import Image
-from io import BytesIO
-import os
+from flask import Flask, render_template
+from pythreejs import *
 
-wiki = wikipediaapi.Wikipedia(language='en', user_agent='JetScienceBot/1.0')
+app = Flask(__name__)
 
-os.makedirs("wiki", exist_ok=True)
+# Create a 3D cube
+cube = Mesh(
+    geometry=BoxGeometry(1, 1, 1),
+    material=MeshBasicMaterial(color='red'),
+    position=[0, 0, 0]
+)
 
-def search_wikipedia(query):
-    page = wiki.page(query)
-    if page.exists():
-        summary = page.summary
-        return summary
-    else:
-        return "I couldn’t find anything on that."
+# Create a scene
+scene = Scene(children=[cube])
 
-def fetch_image(prompt):
-    try:
-        url = f"https://image.pollinations.ai/prompt/{prompt.replace(' ', '%20')}"
-        response = requests.get(url)
-        img = Image.open(BytesIO(response.content))
-        img_path = f"wiki/{prompt.replace(' ', '_')}.png"
-        img.save(img_path)
-        return f"Image saved as {img_path}"
-    except Exception as e:
-        return f"Image fetch failed: {e}"
+# Create a camera and set it in position
+camera = PerspectiveCamera(fov=75, aspect=1, near=0.1, far=1000)
+camera.position = [3, 3, 3]
+camera.lookAt([0, 0, 0])
 
-def science_bot():
-    print("JetWiki: Yo, ask me anything science-related. Type 'exit' to quit.")
+# Setup a WebGLRenderer
+renderer = WebGLRenderer(width=800, height=600)
+renderer.set_state(800, 600)
 
-    while True:
-        user_input = input("You: ").strip().lower()
-        if user_input == "exit":
-            print("JetWiki: See ya!")
-            break
+# Define a rotation update function
+def update_rotation():
+    # Ensure cube.rotation is a Vector3 object (not a tuple)
+    if isinstance(cube.rotation, tuple):
+        cube.rotation = [0, 0, 0]  # Initializing as a list, can also be Vector3 if needed
 
-        if user_input.startswith("show image of"):
-            prompt = user_input.replace("show image of", "").strip()
-            if prompt:
-                result = fetch_image(prompt)
-                print("JetWiki:", result)
-            else:
-                print("JetWiki: You need to say what image you want.")
-        else:
-            response = search_wikipedia(user_input)
-            print("JetWiki:", response)
+    # Update rotation (this assumes cube.rotation is a list with 3 elements: [x, y, z])
+    cube.rotation[0] += 0.01  # Rotate around the X-axis
+    cube.rotation[1] += 0.01  # Rotate around the Y-axis
+    cube.rotation[2] += 0.01  # Rotate around the Z-axis
 
-science_bot()
+# Define a simple route to serve the page
+@app.route('/')
+def home():
+    update_rotation()  # Update the rotation each time the route is called
+    return render_template('index.html', cube=cube, scene=scene, camera=camera, renderer=renderer)
+
+if __name__ == '__main__':
+    app.run(debug=True)

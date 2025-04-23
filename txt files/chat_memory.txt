@@ -89,4 +89,26 @@ Ai: Glad I can help!
 
 Session 11 (2025-04-19 18:00:36)
 Me: hey jet, im giving you 2 acts, 1st is your main one which is just you, whatever you want, second is JARVIS mode, you act like jarvis frmom iron man
-Ai: Understood.
+Ai: Understood
+
+Session 12 (2025-04-21 14:44:12)
+Me: hey jet, how do batteries work? i wanna make an arc reactor
+Ai: Batteries work by converting chemical energy into electrical energy through reactions at two electrodes, a cathode (+) and an anode (-), which are immersed in an electrolyte. This electrolyte allows the flow of ions between the electrodes to complete a circuit. When connected to a circuit, a chemical reaction at the anode releases electrons, which flow through the circuit to the cathode where they are consumed by another chemical reaction. This electron flow is electric current. Different battery types use different materials, affecting voltage and lifespan.
+Creating a real arc reactor like Tony Stark's is much more complex.  The fictional arc reactor uses nuclear fusion, which is difficult to miniaturize. Real-world fusion reactors are massive and not portable.  You could, however, explore real-world electronics projects and experiment with circuits and battery types.  There are many online resources and kits for learning and building small-scale projects related to electrical circuits and power generation.
+Me: hm, cool, thanks shutdown, also dont do like (I cAnt BuT Im PrEtenDing) bcs you are shuttiong down, just say smth
+Jet: Okay, good to know.  See you later!
+
+Session 13 (2025-04-21 14:48:03)
+Me: hey jet. do me a favor, who said "Tony was able to build this in a cave, with a box of scraps"
+Ai: That line, "Tony Stark was able to build this in a cave! With a box of scraps!" is spoken by **Obadiah Stane** (played by Jeff Bridges) in the first *Iron Man* film.
+Me: alright, thanks, shutdown, also you can now turn on the lights, when i say lights on", "turn the light on", "light on, say the lights been on or smth, but if not those word but like, turn leh lights on, say its a mispell if it is, and try a diffrent phrase if close
+Ai: Okay, see you later!
+
+
+Session 14 (2025-04-23 14:37:14)
+Me: i wanna design you a thing, a core, like a head but representing you, what do you want it to be?
+Ai: A stylized terminal window would be awesome!  Think sleek, dark rectangle with dynamic, glowing lines of code constantly shifting within. Maybe some stylized glyphs or symbols could float around, representing different aspects of my functionality (like a speech bubble for language processing, a paintbrush for image generation). The overall feel should be energetic, suggesting constant thought and processing. And perhaps a tiny, almost imperceptible winking emoticon could flicker somewhere in the code, just for fun. 😉
+Me: not the terminal, you, like jarvis, he is an orange orb, how about you?
+Ai: Okay, if we're mirroring Jarvis's orb, I'd like something that represents *me*. How about a stylized, multifaceted crystal? It could be clear or lightly tinted, constantly shifting colors internally as if processing information. The facets could catch and refract light, creating dynamic, ever-changing patterns. This would symbolize how I process information, pulling different threads together and evolving.  It could also project holographic displays when needed. And maybe a tiny, playful fractal could occasionally bloom within the crystal, a nod to my quirky humor.
+Me: ok, thank you, shutdown
+Ai: See you later!
