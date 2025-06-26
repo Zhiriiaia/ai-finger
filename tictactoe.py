@@ -46,7 +46,7 @@ def minimax(depth, is_maximizing):
         return best_score
 
 def best_move():
-    if random.random() < 0.2:  # 20% chance to make a bad move
+    if random.random() < 0.3:  # 20% chance to make a bad move
         available_moves = [i for i in range(9) if board[i] == " "]
         board[random.choice(available_moves)] = "O"
         return

@@ -4,7 +4,7 @@ import time
 
 while True:
     user_input = input("Enter command: ").lower()  # Get input from the user
-
+    
 if user_input == 's':  # Start the timer
             if not running:
                 print("Get ready!")

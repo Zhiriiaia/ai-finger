@@ -60,7 +60,7 @@ def chat():
 
         log_to_file("Me", user_input)
 
-        # Time check
+        # Time check time
         time_keywords = ["what time", "current time", "tell me the time", "time is it"]
         if any(keyword in user_input.lower() for keyword in time_keywords):
             ph_time = datetime.now(pytz.timezone("Asia/Manila")).strftime("%I:%M %p")
@@ -78,7 +78,7 @@ def chat():
             log_to_file("Ai", result)
             continue
 
-        exit_keywords = ["bye", "see you", "shutdown"]
+        exit_keywords = ["/shutdown"]
         response = chat_session.send_message(user_input)
         if any(keyword in user_input.lower() for keyword in exit_keywords):
             print("Jet:", response.text)

@@ -1,0 +1,76 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jet's Homepage</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #00a8ff;
+        }
+
+        .crystal {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+            background-size: 400% 400%; /* Adjust size for animation effect */
+            animation: crystal-glow 10s ease infinite; /* Increased animation time, smoother transition */
+            border-radius: 50%;
+            filter: blur(2px); /* Subtle blur effect */
+            box-shadow: 0 0 10px rgba(0, 168, 255, 0.5); /* Added a glow */
+
+        }
+
+        @keyframes crystal-glow {
+            0% {
+                background-position: 0% 50%;
+                transform: scale(1); /* Start at normal scale */
+            }
+            50% {
+                 transform: scale(1.1); /* Slight pulsating effect */
+
+            }
+            100% {
+                background-position: 100% 50%;
+                transform: scale(1); /* Return to normal scale */
+            }
+        }
+
+        .status {
+            margin-top: 10px; /* Added margin for spacing */
+            font-size: 1.2em;  /* Increased font size */
+            color: #00a8ff; /* Same color as the heading */
+         }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Jet</h1>
+    <div class="crystal"></div>
+    <div class="status">Online</div>
+</div>
+
+</body>
+</html>
