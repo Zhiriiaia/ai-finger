@@ -6,7 +6,7 @@ from PIL import Image
 from io import BytesIO
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyDm5Pt3c8b1jWOlKkfU972npqHOaUZIWx4")
+genai.configure(api_key="AIzaSyD2B46yojYB2AQzktJNR7jzIHRrqAISG9A")
 
 # Chat memory file path
 chat_file = "txt files/chat_memory.txt"
@@ -26,7 +26,7 @@ with open(chat_file, "r") as f:
     past_convo = f.read()
 
 # Start chat
-model = genai.GenerativeModel("gemini-1.5-pro")
+model = genai.GenerativeModel("gemini-2.0-flash")
 chat_session = model.start_chat(history=[{"role": "user", "parts": past_convo}])
 
 # Write session header

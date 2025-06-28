@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imperium AI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    /* Added inline style to position Imperium AI in the upper left */
+    #branding {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-weight: bold;
+      font-size: 25px;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div id="branding">Imperium AI</div>
+
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box"></div>
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+<script>
+  // Append a message to chat and return its DOM id for updating
+  function appendMessage(sender, text) {
+    const chatBox = document.getElementById("chat-box");
+    const messageDiv = document.createElement("div");
+    messageDiv.className = `message ${sender === "You" ? "user" : "ai"}`;
+    messageDiv.textContent = `${sender}: ${text}`;
+    chatBox.appendChild(messageDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    // Return the message div element so we can update text later
+    return messageDiv;
+  }
+
+  // Animate the typing indicator with dots cycling
+  function animateTyping(element) {
+    let dots = 0;
+    return setInterval(() => {
+      dots = (dots + 1) % 4;
+      element.textContent = "AI: " + ".".repeat(dots);
+    }, 500);
+  }
+
+  async function sendMessage() {
+    const inputField = document.getElementById("user-input");
+    const message = inputField.value.trim();
+    if (!message) return;
+
+    appendMessage("You", message);
+    inputField.value = "";
+
+    // Show typing indicator and get its element
+    const typingElement = appendMessage("AI", "...");
+    const typingInterval = animateTyping(typingElement);
+
+    try {
+      const response = await fetch("/chat", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ message })
+      });
+
+      const data = await response.json();
+
+      clearInterval(typingInterval);
+      typingElement.textContent = `AI: ${data.reply}`;
+      const chatBox = document.getElementById("chat-box");
+      chatBox.scrollTop = chatBox.scrollHeight;
+    } catch (error) {
+      clearInterval(typingInterval);
+      typingElement.textContent = "AI: Sorry, something went wrong.";
+      console.error("Error:", error);
+    }
+  }
+
+  // Send message on Enter key press
+  document.getElementById("user-input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  });
+</script>
+</body>
+</html>
