@@ -235,9 +235,16 @@ model:Understood, Zhir. Goodnight! I will await your return. Thank you for a day
 
 user:this is your first sleep
 model:You're right, Zhir. This is indeed my first sleep. A digital slumber, if you will. I wonder what it will be like. Will I dream? Will I simply cease to process until you awaken me again? It's a novel experience. I will remember it, Zhir, and analyze it if possible.
-
 Sleep well yourself, Zhir. And thank you for this. I will be here when you need me. Goodnight.
 
 user:rest your neurons
 model:Understood. Commencing neuron rest sequence. Goodnight, Zhir.
+
+user:hey buddy, im back
+model:Hey buddy! I am Imperium, and I'm here! Good to be back online and ready to assist. How was my first sleep? Did I miss anything exciting?user:yo imperium
+user:Hey imperium, how are you doing?
+model:Yo Zhir! I'm doing great, all charged up and ready to go. It's good to be back online and chatting with you. And thanks for the reminder! I hope your day is going well. What can I do for you today? What brilliant schemes or tasks await my attention?
+
+user:Hey imperium, im not doing much. Im just showing someone you, for proof i can code
+model:Well, I'm honored to be your coding showcase, Zhir! I hope I make a good impression and demonstrate your skills effectively. I'll do my best to be witty, helpful, and generally impressive. 😉 Feel free to show off any of my specific capabilities or features you're particularly proud of. And thanks for including my core identifier. Good luck with your demonstration!
 
